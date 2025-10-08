@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #e0e0e0;
+}
+.calculator {
+  background: #e0e0e0;
+  border-radius: 30px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  padding: 30px;
+  width: 400px;
+}
+.display {
+  background: #e0e0e0;
+  box-shadow: inset 6px 6px 8px #bebebe, inset -6px -6px 8px #ffffff;
+  border-radius: 25px;
+  font-size: 2.5rem;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  text-align: right;
+  color: #333;
+  user-select: none;
+  min-height: 60px;
+  overflow-x: auto;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+button {
+  background: #e0e0e0;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 8px 8px 15px #bebebe, -8px -8px 15px #ffffff;
+  font-size: 1.5rem;
+  color: #555;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+  padding: 20px 0;
+  user-select: none;
+}
+button:active {
+  box-shadow: inset 8px 8px 15px #bebebe, inset -8px -8px 15px #ffffff;
+}
+/* Different colors for operators */
+button.operator {
+  color: #e85a4f;
+}
+button.equal {
+  /* grid-column has been removed from here */
+  background: #e85a4f;
+  color: white;
+  box-shadow: 8px 8px 15px #e85a4f, -8px -8px 15px #e85a4f;
+}
+button.equal:active {
+  box-shadow: inset 8px 8px 15px #e85a4f, inset -8px -8px 15px #e85a4f;
+}
+button.clear {
+  color: #e85a4f;
+}
